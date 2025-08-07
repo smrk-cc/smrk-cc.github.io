@@ -1,0 +1,184 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>变帅中</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="refresh" content="1;url=https://scy-nine.vercel.app">
+    <style>
+        :root {
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --success: #28a745;
+            --background: #f8f9fa;
+            --text: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            color: var(--text);
+            background: var(--background);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+        }
+
+        .alert-card {
+            max-width: 100%;
+            width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .spinner {
+            width: 3.5rem;
+            height: 3.5rem;
+            border: 0.25em solid rgba(0,123,255,0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+            margin: 1rem auto;
+        }
+
+        .alert-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .domain-badge {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background: var(--background);
+            border-radius: 2em;
+            font-weight: 500;
+            margin: 1rem 0;
+            word-break: break-word;
+            max-width: 100%;
+        }
+
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--success);
+            margin: 1rem 0;
+        }
+
+        .jump-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            background: var(--primary);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 2rem;
+            transition: transform 0.1s ease;
+            margin: 1rem 0;
+            min-height: 3rem;
+        }
+
+        .jump-btn:active {
+            transform: scale(0.95);
+        }
+
+        .security-tip {
+            color: var(--secondary);
+            font-size: 0.875rem;
+            margin-top: 1.5rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 575.98px) {
+            .alert-card {
+                padding: 1.5rem;
+                border-radius: 8px;
+            }
+
+            .alert-title {
+                font-size: 1.1rem;
+            }
+
+            .spinner {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .countdown {
+                font-size: 1.25rem;
+            }
+
+            .jump-btn {
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-card">
+        <div class="spinner"></div>
+        <h1 class="alert-title">变美中</h1>
+        
+        <div class="domain-badge">
+            https://scy-nine.vercel.app        </div>
+
+        <div class="countdown">
+            请等待 <span id="countdown">1</span> 秒，若无法访问点击下方
+        </div>
+
+        <a href="https://scy-nine.vercel.app" class="jump-btn" target="_blank">立即访问</a>
+
+
+    </div>
+
+    <script>
+        // 倒计时控制
+        let countdown = 1;
+        const countdownElement = document.getElementById('countdown');
+        
+        const updateTimer = () => {
+            countdownElement.textContent = countdown;
+            if(countdown-- <= 0) {
+                window.location.href = "https://scy-nine.vercel.app ";
+            }
+        };
+        
+        // 立即执行一次避免初始延迟
+        updateTimer();
+        const timer = setInterval(updateTimer, 1000);
+
+        // 按钮防重复点击
+        let isRedirecting = false;
+        document.querySelector('.jump-btn').addEventListener('click', (e) => {
+            if(isRedirecting) {
+                e.preventDefault();
+                return;
+            }
+            isRedirecting = true;
+            setTimeout(() => {
+                window.location.href = "https://scy-nine.vercel.app ";
+            }, 100);
+        });
+    </script>
+        
+
+</body>
+</html>

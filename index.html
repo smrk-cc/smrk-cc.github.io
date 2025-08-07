@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简约导航 | 优秀的导航网站</title>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--bg-color);
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-shadow: 2px 2px 0px rgba(255,107,129,0.1);
+            margin-bottom: 0.5rem;
+        }
+        .category-box {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+
+        .category-title {
+            font-size: 16px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .category-title i {
+            margin-right: 8px;
+            color: var(--secondary-color);
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 10px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 992px) {
+            .link-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .link-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .nav-link {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="static/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">🍓 简约导航</h1>
+            <p class="tagline">优秀的导航网站</p>
+        </header>
+
+        <div class="category-box">
+            <h2 class="category-title">
+                <i class="fas fa-snowflake"></i>
+                站长推荐
+            </h2>
+            <div class="link-grid">
+                <a href="track-1.html" class="nav-link" target="_blank">集男们</a>
+                                    <a href="track-1.html" class="nav-link" target="_blank">集美们</a>
+                                    
+                            </div>
+        </div>
+
+        <div class="category-box">
+            <h2 class="category-title">
+                <i class="fas fa-film"></i>
+                特色好站
+            </h2>
+            <div class="link-grid">
+                                    <a href="track-1.html" class="nav-link" target="_blank">小帅</a>
+                                    <a href="track-2.html" class="nav-link" target="_blank">小美</a>
+                                    
+                            </div>
+        </div>
+        <div class="category-box">
+            <h2 class="category-title">
+                <i class="fas fa-globe"></i>
+                优质导航
+            </h2>
+            <div class="link-grid">
+                                    <a href="track-2.html" class="nav-link" target="_blank">点我变帅</a>
+                                    <a href="track-1.html" class="nav-link" target="_blank">点我变美</a>
+                                    
+                            </div>
+        </div>
+        <div class="category-box">
+            <h2 class="category-title">
+                <i class="fas fa-globe"></i>
+                媒体专区
+            </h2>
+            <div class="link-grid">
+                                    <a href="https://www.douyin.com" class="nav-link" target="_blank">抖音</a>
+<a href="https://www.kuaishou.com" class="nav-link" target="_blank">快手</a>
+<a href="https://www.bilibili.com" class="nav-link" target="_blank">哔哩哔哩</a>
+<a href="https://www.youku.com" class="nav-link" target="_blank">优酷</a>
+<a href="https://v.qq.com" class="nav-link" target="_blank">腾讯视频</a>
+<a href="https://tv.sohu.com" class="nav-link" target="_blank">搜狐视频</a>
+<a href="https://www.iqiyi.com" class="nav-link" target="_blank">爱奇艺</a>
+<a href="https://www.mgtv.com" class="nav-link" target="_blank">芒果TV</a>
+<a href="https://weibo.com" class="nav-link" target="_blank">微博</a>
+<a href="https://www.zhihu.com" class="nav-link" target="_blank">知乎</a>
+
+                                  
+                
+
+            </div>
+        </div>
+        
+        <div class="copy"> 
+    		CopyRight © 
+    		<span style="color:#1890ff;">简约导航&nbsp;
+    		<i class="fa fa-link"></i>&nbsp;<u>https://scy-nine.vercel.app</u>&nbsp;
+    		<i class="fa fa-envelope-o"></i>&nbsp;buliangdizhi@gmail.com&nbsp;
+    		<i class="fa fa-paper-plane"></i>&nbsp;@jianyuedaohang</span>
+	    </div>
+    </div>
+
+</body>
+</html>
